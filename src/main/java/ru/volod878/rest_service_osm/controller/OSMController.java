@@ -3,7 +3,9 @@ package ru.volod878.rest_service_osm.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 import ru.volod878.rest_service_osm.models.OSMObject;
 import ru.volod878.rest_service_osm.service.GeoService;
 
@@ -27,5 +29,7 @@ public class OSMController {
                 ? new ResponseEntity<>(osmObject, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+
+    //todo добавить ExceptionHandler
 
 }

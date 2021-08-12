@@ -17,7 +17,7 @@ public class OpenStreetMap {
             return new URL(link);
         } catch (MalformedURLException e) {
             e.printStackTrace();
-            return null;
+            return null;  //todo заменить null на исключение
         }
     }
 }

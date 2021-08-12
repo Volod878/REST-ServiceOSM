@@ -11,7 +11,7 @@ public class WebParser {
 
     public static String parseUrl(URL url) {
         if (url == null) {
-            return "";
+            return ""; //todo вернуть исключение
         }
 
         StringBuilder stringBuilder = new StringBuilder();
